@@ -4,9 +4,7 @@ from abc import ABC, abstractmethod
 from dataclasses import replace
 from typing import Any, TypeVar
 
-from .tamagochi import AbstractTamagochi
 from .clicker import AbstractClicker
-from .models import Food, Medicine
 from .exceptions import (
     ActionCancelled,
     NoItemsToChoose,
@@ -14,6 +12,8 @@ from .exceptions import (
     TamagochiIsGone,
     WrongChoice,
 )
+from .models import Food, Medicine
+from .tamagochi import AbstractTamagochi
 
 Item = TypeVar('Item', Food, Medicine)
 
